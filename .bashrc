@@ -56,6 +56,7 @@ alias g++='g++ -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror'
 alias latexmk='latexmk -auxdir=./build -pdf'
 alias c='clear'
 alias v='nvim'
+alias bye='shutdown now'
 
 # Easily enter my ubuntu container
 alias ubuntu='distrobox enter ubuntu'
