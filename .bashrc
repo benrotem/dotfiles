@@ -64,6 +64,7 @@ alias ubuntu='distrobox enter ubuntu'
 # On Ubuntu, automatically setup ROS2
 if [ "$distro" == 'Ubuntu' ]; then
 	source /opt/ros/jazzy/setup.bash
+  export ROS_DOMAIN_ID=20
 fi
 
 # Add my scripts directory to PATH
