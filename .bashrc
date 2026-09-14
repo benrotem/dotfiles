@@ -64,6 +64,7 @@ alias ubuntu='distrobox enter ubuntu'
 if [ "$distro" == 'Ubuntu' ]; then
 	source /opt/ros/jazzy/setup.bash
   export ROS_DOMAIN_ID=20
+  export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 fi
 
 # Add my scripts directory to PATH
