@@ -11,31 +11,31 @@ distro=$(cat /etc/os-release | grep -oP '(?<=^NAME=")[^"]+')
 # Fancy prompt
 function get_distro
 {
-	if [ "$distro" != 'Arch Linux' ]; then
-		flag="\001\e[94m\002[\001\e[95m\002$distro\001\e[94m\002]─\001\e[0m\002"
-	fi
+  if [ "$distro" != 'Arch Linux' ]; then
+    flag="\001\e[94m\002[\001\e[95m\002$distro\001\e[94m\002]─\001\e[0m\002"
+  fi
 
-	echo -e "$flag"
+  echo -e "$flag"
 }
 
 function get_git_branch
 {
-	branch=$(git branch --show-current 2>/dev/null)
-	
-	if [ $branch ]; then
-		flag="\001\e[94m\002─(\001\e[93m\002$branch\001\e[94m\002)\001\e[0m\002"
-	fi
+  branch=$(git branch --show-current 2>/dev/null)
 
-	echo -e "$flag"
+  if [ $branch ]; then
+    flag="\001\e[94m\002─(\001\e[93m\002$branch\001\e[94m\002)\001\e[0m\002"
+  fi
+
+  echo -e "$flag"
 }
 
 function get_exit_code
 {
-	if [ $? -ne 0 ]; then
-		flag="\001\e[94m\002─\001\e[91m\002❌\001\e[0m\002"
-	fi
+  if [ $? -ne 0 ]; then
+    flag="\001\e[94m\002─\001\e[91m\002❌\001\e[0m\002"
+  fi
 
-	echo -e "$flag"
+  echo -e "$flag"
 }
 
 PROMPT_COMMAND='exit_flag=$(get_exit_code); distro_flag=$(get_distro); git_flag=$(get_git_branch)'
@@ -43,7 +43,7 @@ PS1='\[\e[94m\]╭─$distro_flag\[\e[94m\](\[\e[93m\]\W\[\e[94m\])$git_flag$exi
 
 # Simple prompt for tty
 if [ $TERM == 'linux' ]; then
-	PS1='\[\e[93m\](\u@\h \W) \$\[\e[97m\] '
+  PS1='\[\e[93m\](\u@\h \W) \$\[\e[97m\] '
 fi
 
 # Aliases
@@ -62,7 +62,7 @@ alias ubuntu='distrobox enter ubuntu'
 
 # On Ubuntu, automatically setup ROS2
 if [ "$distro" == 'Ubuntu' ]; then
-	source /opt/ros/jazzy/setup.bash
+  source /opt/ros/jazzy/setup.bash
   export ROS_DOMAIN_ID=20
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
   export TURTLEBOT3_MODEL=burger
