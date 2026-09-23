@@ -43,7 +43,7 @@ PS1='\[\e[94m\]╭─$distro_flag\[\e[94m\](\[\e[93m\]\W\[\e[94m\])$git_flag$exi
 
 # Simple prompt for tty
 if [ $TERM == 'linux' ]; then
-	PS1='\[\e[97m\](\u@\h \W) \$ '
+	PS1='\[\e[93m\](\u@\h \W) \$\[\e[97m\] '
 fi
 
 # Aliases
