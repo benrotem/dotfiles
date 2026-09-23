@@ -5,3 +5,5 @@
 	short = true
 [alias]
 	loog = log --all --graph --oneline -10
+[core]
+	editor = nvim
