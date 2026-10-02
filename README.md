@@ -19,3 +19,12 @@ The following packages are _recommended_:
 - `brightnessctl` for screen brightness keybinds
 
 Of course you may use alternatives if you wish, just make sure to modify `rc.lua` accordingly.
+
+## Setup
+
+Some _root_ files were intentionally moved under the home directory, to be tracked as dotfiles.
+A symbolic link must be created at their original path so the system can find them.
+
+```bash
+sudo ln -s /home/$USER/.config/ly/config.ini /etc/ly/
+```
