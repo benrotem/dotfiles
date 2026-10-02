@@ -66,6 +66,8 @@ if [ "$distro" == 'Ubuntu' ]; then
   export ROS_DOMAIN_ID=20
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
   export TURTLEBOT3_MODEL=burger
+  cd $HOME/mtrx3760/proj1
+  source $HOME/mtrx3760/proj1/install/setup.bash
 fi
 
 # Add my scripts directory to PATH
