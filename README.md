@@ -1,12 +1,16 @@
 # Dotfiles
-My dotfiles on Arch Linux, with the awesome window manager.
+My dotfiles and other configurations on Arch Linux.
 
 ![](./rice.png)
 
-Other key pieces of software which these files configure:
-- Alacritty
-- Neovim
-- Qutebrowser
+Key pieces of software which these files configure:
+- [Alacritty](https://alacritty.org/)
+- [Awesome window manager](https://awesomewm.org/)
+- Git
+- [Ly](https://github.com/fairyglade/ly)
+- [Neovim](https://neovim.io/)
+- [Qutebrowser](https://qutebrowser.org/)
+- SSH
 
 ## Dependencies
 The following packages _must be installed_ (`rc.lua` will not load without them):
