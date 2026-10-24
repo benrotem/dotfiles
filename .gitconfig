@@ -1,6 +1,10 @@
 [user]
 	name = Ben Rotem
 	email = brotem321@gmail.com
+
+[includeIf "hasconfig:remote.*.url:git@github.sydney.edu.au:*/**"]
+  path = ~/.gitconfig-uni
+
 [status]
 	short = true
 [alias]
