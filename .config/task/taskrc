@@ -19,13 +19,18 @@ hooks.location=~/.config/task/hooks
 #include solarized-light-256.theme
 #include no-color.theme
 
-# Define an 'Inbox' list, sorted by age.
+# Define an 'Inbox' list, the singular funnel to capture all 'stuff'; sorted by age.
 report.inbox.columns=id,entry.age,description
 report.inbox.labels=ID,Age,Description
 report.inbox.filter=status:pending +in
 report.inbox.sort=entry+
 
-# Hide blocked tasks and inbox items in 'next' report.
-report.next.filter=+READY -in limit:page
+# Define a 'Someday' list for ideas we may want to address in the future.
+report.someday.columns=id,project,description
+report.someday.labels=ID,Project,Description
+report.someday.filter=status:pending +someday
+
+# Hide blocked tasks and custom lists in 'next' report.
+report.next.filter=+READY -in -someday limit:page
 
 news.version=3.4.2
