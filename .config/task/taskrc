@@ -19,4 +19,35 @@ hooks.location=~/.config/task/hooks
 #include solarized-light-256.theme
 #include no-color.theme
 
+# Define an 'Inbox' list, the singular funnel to capture all 'stuff'.
+report.inbox.columns=id,entry.age,description
+report.inbox.labels=ID,Age,Description
+report.inbox.filter=status:pending +in
+report.inbox.sort=entry+
+
+# Define a 'Someday' list for ideas we may want to address in the future.
+report.someday.columns=id,project,description
+report.someday.labels=ID,Project,Description
+report.someday.filter=status:pending +someday
+report.someday.sort=entry+
+
+# Define a 'Waiting-for' list for items delegated to someone else.
+uda.who.type=string
+uda.who.label=Who
+report.awaiting.columns=id,entry.age,who,project,description
+report.awaiting.labels=ID,Age,Who,Project,Description
+report.awaiting.filter=status:pending +awaiting
+report.awaiting.sort=entry+
+
+# Hide blocked tasks and custom lists in 'next' report.
+report.next.filter=+READY -in -someday -awaiting limit:page
+
+# Time estimate and brainpower attributes.
+# You can filter reports by these limiting criteria, alongside context tags.
+uda.estimate.type=duration
+uda.estimate.label=🕰️
+uda.brainpower.type=string
+uda.brainpower.label=🧠
+uda.brainpower.values=H,M,L
+
 news.version=3.4.2
