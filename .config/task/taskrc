@@ -30,7 +30,14 @@ report.someday.columns=id,project,description
 report.someday.labels=ID,Project,Description
 report.someday.filter=status:pending +someday
 
+# Define a 'Waiting-for' list for items delegated to someone else.
+uda.who.type=string
+uda.who.label=Who
+report.awaiting.columns=id,entry.age,who,project,description
+report.awaiting.labels=ID,Age,Who,Project,Description
+report.awaiting.filter=status:pending +awaiting
+
 # Hide blocked tasks and custom lists in 'next' report.
-report.next.filter=+READY -in -someday limit:page
+report.next.filter=+READY -in -someday -awaiting limit:page
 
 news.version=3.4.2
