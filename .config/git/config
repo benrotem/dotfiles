@@ -3,7 +3,7 @@
 	email = brotem321@gmail.com
 
 [includeIf "hasconfig:remote.*.url:git@github.sydney.edu.au:*/**"]
-  path = ~/.gitconfig-uni
+  path = ~/.config/git/config-uni
 
 [status]
 	short = true
