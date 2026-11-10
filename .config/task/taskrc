@@ -19,7 +19,7 @@ hooks.location=~/.config/task/hooks
 #include solarized-light-256.theme
 #include no-color.theme
 
-# Define an 'Inbox' list, the singular funnel to capture all 'stuff'; sorted by age.
+# Define an 'Inbox' list, the singular funnel to capture all 'stuff'.
 report.inbox.columns=id,entry.age,description
 report.inbox.labels=ID,Age,Description
 report.inbox.filter=status:pending +in
@@ -29,6 +29,7 @@ report.inbox.sort=entry+
 report.someday.columns=id,project,description
 report.someday.labels=ID,Project,Description
 report.someday.filter=status:pending +someday
+report.someday.sort=entry+
 
 # Define a 'Waiting-for' list for items delegated to someone else.
 uda.who.type=string
@@ -36,6 +37,7 @@ uda.who.label=Who
 report.awaiting.columns=id,entry.age,who,project,description
 report.awaiting.labels=ID,Age,Who,Project,Description
 report.awaiting.filter=status:pending +awaiting
+report.awaiting.sort=entry+
 
 # Hide blocked tasks and custom lists in 'next' report.
 report.next.filter=+READY -in -someday -awaiting limit:page
