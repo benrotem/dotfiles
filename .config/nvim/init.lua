@@ -21,3 +21,10 @@ vim.opt.softtabstop = 2
 
 -- Language servers
 vim.lsp.enable('clangd')
+
+-- Classify tpp files as C++
+vim.filetype.add({
+  extension = {
+    tpp = "cpp",
+  },
+})
