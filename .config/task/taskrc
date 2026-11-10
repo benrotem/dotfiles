@@ -25,4 +25,7 @@ report.inbox.labels=ID,Age,Description
 report.inbox.filter=status:pending +in
 report.inbox.sort=entry+
 
+# Hide blocked tasks and inbox items in 'next' report.
+report.next.filter=+READY -in limit:page
+
 news.version=3.4.2
