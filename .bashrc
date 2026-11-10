@@ -72,3 +72,6 @@ fi
 
 # Add my scripts directory to PATH
 export PATH="$PATH:$HOME/bin"
+
+# Capture 'stuff' into the taskwarrior Inbox
+stuff() { task add +in -- "$@"; }
